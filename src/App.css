@@ -1,0 +1,109 @@
+/* Global Reset and Basic Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 10px;
+  /*background-image: url('public/Welcome to Patient Medicine & Appointment Tracking System phoTO.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;*/
+  font-weight: bold;
+  min-height: 50vh; 
+}
+
+
+html, body, #root {
+  height: 100%;
+}
+.overlay {
+  background-color: rgba(255, 255, 255, 0.8); /* white with transparency */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Flex Layout for Full Height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar and Footer */
+.navbar, .footer {
+  background: #07f6ba;
+  color: rgb(5, 5, 5);
+  padding: 9px;
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.navbar a {
+  margin: 0 30px;
+  color: rgb(1, 1, 1);
+  text-decoration: none;
+}
+
+/* Main Content Centered */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading and Subtext Styling */
+.heading {
+  font-weight: bold;
+  /*text-decoration: underline;*/
+  font-size: 42px;
+}
+
+.subtext {
+  color: #f70000;
+  font-weight: bold;
+  font-size: 29px;
+}
+
+/* Form & Table Styling (optional for other pages) */
+.form {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form, .container {
+    padding: 10px;
+  }
+
+  .navbar a {
+    margin: 0 10px;
+  }
+}
