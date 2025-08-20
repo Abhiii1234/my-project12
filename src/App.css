@@ -1,25 +1,15 @@
 /* Global Reset and Basic Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
-  padding-bottom: 10px;
-  /*background-image: url('public/Welcome to Patient Medicine & Appointment Tracking System phoTO.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;*/
-  font-weight: bold;
-  min-height: 50vh; 
+  padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eaeaea;
+  min-height: 100vh;
 }
-
 
 html, body, #root {
   height: 100%;
-}
-.overlay {
-  background-color: rgba(255, 255, 255, 0.8); /* white with transparency */
-  padding: 20px;
-  border-radius: 10px;
 }
 
 /* Flex Layout for Full Height */
@@ -31,18 +21,25 @@ html, body, #root {
 
 /* Navbar and Footer */
 .navbar, .footer {
-  background: #07f6ba;
-  color: rgb(5, 5, 5);
-  padding: 9px;
+  background: #1a3c40;
+  color: #eaeaea;
+  padding: 14px;
   text-align: center;
-  font-size: 20px;
-
+  font-weight: bold;
+  box-shadow: 0 0 8px #0ef, 0 0 16px rgba(0, 255, 200, 0.4);
 }
 
 .navbar a {
-  margin: 0 30px;
-  color: rgb(1, 1, 1);
+  margin: 0 20px;
+  color: #eaeaea;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar a:hover {
+  color: #0ef;
+  text-shadow: 0 0 5px #0ef, 0 0 10px #0ef;
 }
 
 /* Main Content Centered */
@@ -50,57 +47,88 @@ html, body, #root {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
 }
 
-/* Heading and Subtext Styling */
+/* Heading Styling */
 .heading {
   font-weight: bold;
-  /*text-decoration: underline;*/
-  font-size: 42px;
+  font-size: 32px;
+  color: #0ef;
+  text-shadow: 0 0 8px #0ef, 0 0 15px rgba(0, 255, 200, 0.6);
+  margin-bottom: 20px;
 }
 
-.subtext {
-  color: #f70000;
-  font-weight: bold;
-  font-size: 29px;
-}
-
-/* Form & Table Styling (optional for other pages) */
+/* Form Styling */
 .form {
-  background: white;
-  padding: 20px;
+  background: rgba(20, 20, 20, 0.95);
+  padding: 25px;
   margin: 20px auto;
   width: 90%;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 420px;
+  box-shadow: 0 0 12px #0ef, 0 0 25px rgba(0, 255, 200, 0.4);
+  border-radius: 12px;
 }
 
+/* Input, Select & Button Uniform Styling */
 input, select, button {
   display: block;
   width: 100%;
-  margin: 10px 0;
-  padding: 8px;
+  margin: 12px 0;
+  padding: 12px;
   font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #0ef;
+  border-radius: 6px;
+  height: 48px;
+  background: #111;
+  color: #eaeaea;
+  outline: none;
+  transition: 0.3s;
 }
 
+/* Neon Glow on Focus */
+input:focus, select:focus {
+  border-color: #00ffaa;
+  box-shadow: 0 0 8px #00ffaa, 0 0 16px rgba(0, 255, 200, 0.6);
+}
+
+/* Button Styling */
+button {
+  background: #0ef;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px #0ef, 0 0 20px rgba(0, 255, 200, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #00ffaa;
+  color: #111;
+  box-shadow: 0 0 15px #00ffaa, 0 0 30px rgba(0, 255, 200, 0.6);
+}
+
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
+  color: #eaeaea;
 }
 
 th, td {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #0ef;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
   .form, .container {
-    padding: 10px;
+    padding: 15px;
   }
 
   .navbar a {
